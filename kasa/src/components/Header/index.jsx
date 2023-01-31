@@ -1,13 +1,21 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import logo from "../../assets/logo_kasa.webp";
+import "../../styles/sass/components/header.scss";
 
 function Header() {
   return (
     <header>
-      <img src="../assets/logo_kasa.webp" alt="Logo de Kasa" />
+      <img src={logo} alt="Logo de Kasa" />
       <nav>
-        <Link to="/">Accueil</Link>
-        <Link to="About">A propos</Link>
+        <ul>
+          <li>
+            <Link to="/">Accueil</Link>
+          </li>
+          <li>
+            <Link to="/apropos">A propos</Link>
+          </li>
+        </ul>
       </nav>
     </header>
   );

@@ -1,10 +1,13 @@
 import React from "react";
+import "../../styles/SASS/components/error.scss";
 
 function Error() {
   return (
     <article>
-      <h1>404</h1>
-      <p>Oups! La page que vous demandez n'existe pas.</p>
+      <div className="bloc-text">
+        <h1>404</h1>
+        <p>Oups! La page que vous demandez n'existe pas.</p>
+      </div>
       <a href="/">Retourner sur la page d’accueil</a>
     </article>
   );

@@ -1,0 +1,49 @@
+@import "../../SASS/utils/variables";
+@import "../../SASS/base/base";
+@import "../../SASS/utils/maps";
+@import "../../SASS/utils/mixins";
+
+article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    a{
+        color: $color-primary;
+        text-decoration: underline;
+        font-size: map-get($font-size, text );
+        padding: 12%;
+        // Responsive
+        @include mobile-only{
+            font-size: map-get($font-size , tag );
+            padding-bottom: 35%;
+        }
+    }
+    
+}
+
+.bloc-text {
+    text-align: center;
+    padding: 7%;
+    // Responsive
+    @include mobile-only{
+        padding: 58px;
+    }
+        h1 {
+            font-size: 288px;
+            font-weight: map-get($font-weight , error );
+            // Responsive
+            @include mobile-only{
+                font-size: 96px;
+            }
+        }
+        p{
+            font-size:map-get($font-size , main-title );
+            // Responsive
+            @include mobile-only{
+                font-size: map-get($font-size , text );
+            }
+        }
+}
+

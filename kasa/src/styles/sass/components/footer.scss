@@ -1,0 +1,25 @@
+@import "../../SASS/utils/variables";
+@import "../../SASS/base/base";
+@import "../../SASS/utils/maps";
+@import "../../SASS/utils/mixins";
+
+footer{
+    background-color: $color-footer;
+    color: $color-secondary;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    padding: 5% 0 3% 0;
+        @include mobile-only{
+            
+        }
+
+    p{
+        //Responsive
+        @include mobile-only{
+            font-size: map-get($font-size, responsive-text );
+    }
+    }
+}

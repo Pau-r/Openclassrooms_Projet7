@@ -1,12 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../../assets/logo_kasa.webp";
-import "../../styles/sass/components/header.scss";
+import logoResponsive from "../../assets/logo_responsive.webp";
+import "../../styles/SASS/components/header.scss";
 
 function Header() {
   return (
     <header>
-      <img src={logo} alt="Logo de Kasa" />
+      <img className="img-desktop" src={logo} alt="Logo de Kasa" />
+      <img className="img-responsive" src={logoResponsive} alt="Logo de Kasa" />
       <nav>
         <ul>
           <li>

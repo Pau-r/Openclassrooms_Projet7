@@ -1,0 +1,18 @@
+@import "../../SASS/utils/maps";
+@import "../../SASS/utils/variables";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: map-get($font-weight , text );
+    color: $color-primary;
+}
+
+a {
+    text-decoration: none;
+}

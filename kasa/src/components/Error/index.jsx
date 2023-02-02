@@ -1,5 +1,5 @@
 import React from "react";
-import "../../styles/SASS/components/error.scss";
+import "../../styles/SASS/layout/error.scss";
 
 function Error() {
   return (

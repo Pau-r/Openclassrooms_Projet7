@@ -1,6 +1,6 @@
 import React from "react";
 import logo from "../../assets/logo_blanc.webp";
-import "../../styles/SASS/components/footer.scss";
+import "../../styles/SASS/layout/footer.scss";
 
 function Footer() {
   return (

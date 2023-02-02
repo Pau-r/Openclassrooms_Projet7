@@ -1,8 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import logo from "../../assets/logo_kasa.webp";
 import logoResponsive from "../../assets/logo_responsive.webp";
-import "../../styles/SASS/components/header.scss";
+import "../../styles/SASS/layout/header.scss";
 
 function Header() {
   return (
@@ -12,10 +12,24 @@ function Header() {
       <nav>
         <ul>
           <li>
-            <Link to="/">Accueil</Link>
+            <NavLink
+              to="/"
+              style={({ isActive }) => ({
+                textDecoration: isActive ? "underline" : "none",
+              })}
+            >
+              Accueil
+            </NavLink>
           </li>
           <li>
-            <Link to="/apropos">A propos</Link>
+            <NavLink
+              to="/apropos"
+              style={({ isActive }) => ({
+                textDecoration: isActive ? "underline" : "none",
+              })}
+            >
+              A propos
+            </NavLink>
           </li>
         </ul>
       </nav>

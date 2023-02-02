@@ -1,0 +1,21 @@
+@import "../../SASS/utils/variables";
+@import "../../SASS/base/base";
+@import "../../SASS/utils/maps";
+@import "../../SASS/utils/mixins";
+
+.cards{
+    display: flex;
+    align-items: flex-end;
+    width: 340px;
+    height: 340px;
+    background-color: $color-primary;
+    border-radius: map-get($radius , border-components );
+    @include gradient;
+
+    h2{
+        font-size: map-get($font-size , text );
+        font-weight: map-get($font-weight , text );
+        color: $color-secondary;
+        padding: 20px;
+    }
+}

@@ -1,8 +1,14 @@
 import React from "react";
-//import "./styles/index.css";
+import Banner from "../../components/Banner";
+import Cards from "../../components/Cards";
 
 function Home() {
-  return <div className="App"></div>;
+  return (
+    <div>
+      <Banner />
+      <Cards />
+    </div>
+  );
 }
 
 export default Home;

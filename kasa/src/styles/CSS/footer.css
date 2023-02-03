@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  color: #FF6060;
+  margin: 50px 100px;
+}
+
+a {
+  text-decoration: none;
+}
+
+footer {
+  background-color: #000;
+  color: #FFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+  padding: 5% 0 3% 0;
+}
+@media screen and (max-width: 599px) {
+  footer p {
+    font-size: 12px;
+  }
+}

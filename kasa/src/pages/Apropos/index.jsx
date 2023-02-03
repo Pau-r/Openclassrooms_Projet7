@@ -1,9 +1,10 @@
 import React from "react";
+import Collapse from "../../components/BigCollapse";
 
 function Apropos() {
   return (
     <div>
-      <h1>A propos</h1>
+      <Collapse />
     </div>
   );
 }

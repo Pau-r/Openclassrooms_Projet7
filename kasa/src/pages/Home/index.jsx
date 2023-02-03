@@ -1,12 +1,12 @@
 import React from "react";
 import Banner from "../../components/Banner";
-import Cards from "../../components/Cards";
+import Gallery from "../../components/Gallery";
 
 function Home() {
   return (
     <div>
       <Banner />
-      <Cards />
+      <Gallery />
     </div>
   );
 }

@@ -1,16 +1,17 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../../styles/SASS/components/cards.scss";
 
 function Cards(props) {
-  let logement = props.logement;
+  const logement = props.logement;
 
   return (
-    <a href="/">
+    <Link to={`/logement/${logement.id}`}>
       <div className="cards">
         <img src={logement.cover} alt="" />
         <h2 key={logement.id}>{logement.title}</h2>
       </div>
-    </a>
+    </Link>
   );
 }
 

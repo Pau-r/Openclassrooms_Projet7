@@ -5,7 +5,7 @@ import data from "../../data/logements.json";
 function Gallery() {
   return (
     <ul className="gallery">
-      {data.map((logement) => (
+      {data.map((logement, index) => (
         <li key={logement.id}>{<Cards logement={logement} />}</li>
       ))}
     </ul>

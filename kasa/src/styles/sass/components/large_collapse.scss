@@ -1,0 +1,83 @@
+@import "../../SASS/utils/variables";
+@import "../../SASS/base/base";
+@import "../../SASS/utils/maps";
+@import "../../SASS/utils/mixins";
+
+
+.block {
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 10%;
+    // Responsive 
+        @include mobile-only{
+            margin: 5% 0% 33% 0%;
+        }
+
+        .container{
+                width: 1023px;
+                // Responsive
+                @include mobile-only{
+                    width: 335px;
+                }
+
+                    .barre {
+                        width: 1023px;
+                        height: 47px;
+                        background-color: $color-primary;
+                        border-radius: map-get($radius, border-components);
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        position: relative;
+                        z-index: 3;
+                             // Responsive
+                                @include mobile-only{
+                                    width: 335px;
+                                    height: 30px;
+                    }
+
+                        h2{
+                            color: $color-secondary;
+                            font-weight: map-get($font-weight, text );
+                            font-size: map-get($font-size , text);
+                            padding-left: 2%;
+                            // Responstive
+                            @include mobile-only{
+                                font-size: map-get($font-size , responsive-title );
+                            }
+                        }
+
+                        button{
+                            font-size: 18px;
+                            background: none;
+                            border: none;
+                            color: $color-secondary;
+                            padding-right: 2%;
+                        }
+
+                    }
+
+                    .bloc-contenu{
+                        border-radius: map-get($radius, border-components);
+                        background-color: $color-tertiary;
+                        width: 100%;
+                        margin-top: -5px;
+                        padding: 4% 3% ;
+
+                    
+                        p{
+                            font-weight: map-get($font-weight , subtitle );
+                            font-size: map-get($font-size , secondary-title );
+                            // Responsive
+                            @include mobile-only{
+                                font-size: map-get($font-size , responsive-text );
+                            }
+                        }
+                    }
+
+            }
+
+}

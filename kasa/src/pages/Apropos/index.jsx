@@ -1,9 +1,9 @@
 import React from "react";
-import LargeCollapse from "../../components/LargeCollapse";
+import Collapse from "../../components/Collapse";
 import Banner from "../../components/Banner";
 import image from "../../assets/image_about.webp";
 import "../../styles/SASS/components/banner.scss";
-import "../../styles/SASS/components/large_collapse.scss";
+import "../../styles/SASS/components/collapse_large.scss";
 
 let collapseFiabilite = "Fiabilité";
 let collapseRespect = "Respect";
@@ -25,10 +25,10 @@ function Apropos() {
     <div>
       <Banner imgSrc={image} altTitreBanner={altImageHome} />
       <div className="block">
-        <LargeCollapse titre={collapseFiabilite} contenu={fiabiliteContenu} />
-        <LargeCollapse titre={collapseRespect} contenu={respectContenu} />
-        <LargeCollapse titre={collapseService} contenu={serviceContenu} />
-        <LargeCollapse titre={collapseSecurite} contenu={securiteContenu} />
+        <Collapse titre={collapseFiabilite} contenu={fiabiliteContenu} />
+        <Collapse titre={collapseRespect} contenu={respectContenu} />
+        <Collapse titre={collapseService} contenu={serviceContenu} />
+        <Collapse titre={collapseSecurite} contenu={securiteContenu} />
       </div>
     </div>
   );

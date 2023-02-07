@@ -1,14 +1,15 @@
-import "../../styles/SASS/components/large_collapse.scss";
+import "../../styles/SASS/components/collapse_large.scss";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronUp, faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
-function LargeCollapse(props) {
+function Collapse(props) {
   const [isOpen, setIsOpen] = useState(false);
   const titre = props.titre;
   const contenu = props.contenu;
 
   return isOpen ? (
+    // Etat ouvert
     <div className="container">
       <div className="barre">
         <h2>{titre}</h2>
@@ -21,10 +22,11 @@ function LargeCollapse(props) {
       </div>
     </div>
   ) : (
+    // Etat fermé
     <div className="container">
       <div className="barre">
         <h2>{titre}</h2>
-        <button className="button" onClick={() => setIsOpen(true)}>
+        <button onClick={() => setIsOpen(true)}>
           <FontAwesomeIcon icon={faChevronDown} />
         </button>
       </div>
@@ -32,4 +34,4 @@ function LargeCollapse(props) {
   );
 }
 
-export default LargeCollapse;
+export default Collapse;

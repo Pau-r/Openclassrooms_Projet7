@@ -42,7 +42,7 @@
                         h2{
                             color: $color-secondary;
                             font-weight: map-get($font-weight, text );
-                            font-size: map-get($font-size , text);
+                            font-size: map-get($font-size , secondary-title);
                             padding-left: 2%;
                             // Responstive
                             @include mobile-only{
@@ -61,7 +61,7 @@
                     }
 
                     .bloc-contenu{
-                        border-radius: map-get($radius, border-components);
+                        border-radius: map-get($radius, responsive-components);
                         background-color: $color-tertiary;
                         width: 100%;
                         margin-top: -5px;

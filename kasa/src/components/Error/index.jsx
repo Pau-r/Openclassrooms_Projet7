@@ -3,7 +3,7 @@ import "../../styles/SASS/layout/error.scss";
 
 function Error() {
   return (
-    <article>
+    <article className="error">
       <div className="bloc-text">
         <h1>404</h1>
         <p>Oups! La page que vous demandez n'existe pas.</p>

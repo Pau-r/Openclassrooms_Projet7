@@ -10,11 +10,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 2% 7% ;
-
+    margin: 5% 7% ;
+    
         &__image{
             width: 100%;
             height: 223px;
+            object-fit: cover;
             border-radius: map-get($radius , border-image);   
             filter: brightness(70%);  
             // Responsive
@@ -29,11 +30,12 @@
                 color: $color-secondary;
                 font-size: map-get($font-size , error );
                 font-weight: map-get($font-weight , text );
+                padding: 5%;
 
                 // Responsive
                 @include mobile-only{
                     font-size: map-get($font-size , secondary-title );
-                    padding: 5%;
+                    padding: 10%;
                 }
             
             }

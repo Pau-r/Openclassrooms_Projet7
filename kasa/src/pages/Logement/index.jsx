@@ -5,6 +5,7 @@ import Slideshow from "../../components/Slideshow";
 import Tag from "../../components/Tag";
 import Collapse from "../../components/Collapse";
 import "../../styles/SASS/layout/logement.scss";
+import Rating from "../../components/Rating";
 
 function Logement() {
   const { id } = useParams();
@@ -17,18 +18,23 @@ function Logement() {
     <main>
       <Slideshow key={id} pictures={logement.pictures} />
       <div>
-        <section className="container-titres">
-          <article>
+        <section className="container">
+          <article className="container__titres">
             <h1>{logement.title}</h1>
             <h2>{logement.location}</h2>
+            <div className="tags">
+              {logement.tags.map((tag, index) => (
+                <Tag key={index} tag={tag} />
+              ))}
+            </div>
           </article>
-          {logement.tags.map((tag, index) => (
-            <Tag key={index} tag={tag} />
-          ))}
-        </section>
-
-        <section className="container-hotes">
-          <p></p>
+          <article className="container__hote">
+            <div className="info-hote">
+              <p>{logement.host.name}</p>
+              <img className="image-hote" src={logement.host.picture} alt="" />
+            </div>
+            <Rating />
+          </article>
         </section>
       </div>
 

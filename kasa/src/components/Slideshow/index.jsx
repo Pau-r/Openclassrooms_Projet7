@@ -17,13 +17,9 @@ function Slideshow(props) {
     <div className="slideshow">
       <div className="slideshow__container-chevrons">
         <FontAwesomeIcon
-          onClick={() => {
-            if (index > 1) {
-              setIndex(index - 1);
-            } else {
-              setIndex(nbImages - 1);
-            }
-          }}
+          onClick={() =>
+            index > 0 ? setIndex(index - 1) : setIndex(nbImages - 1)
+          }
           className="chevron"
           icon={faChevronLeft}
         />
@@ -35,7 +31,7 @@ function Slideshow(props) {
           icon={faChevronRight}
         />
       </div>
-      <div className="slideshow__container-images">
+      <div className="slideshow__container-image">
         <img
           className="images-slide"
           key={index}

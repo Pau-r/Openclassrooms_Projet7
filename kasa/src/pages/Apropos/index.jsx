@@ -3,7 +3,7 @@ import Collapse from "../../components/Collapse";
 import Banner from "../../components/Banner";
 import image from "../../assets/image_about.webp";
 import "../../styles/SASS/components/banner.scss";
-import "../../styles/SASS/components/collapse_large.scss";
+import "../../styles/SASS/components/collapse.scss";
 
 let collapseFiabilite = "Fiabilité";
 let collapseRespect = "Respect";
@@ -22,7 +22,7 @@ function Apropos() {
   let altImageHome = "Photographie d'un paysage de montagnes";
 
   return (
-    <div>
+    <div className="bloc-apropos">
       <Banner imgSrc={image} altTitreBanner={altImageHome} />
       <div className="block">
         <Collapse titre={collapseFiabilite} contenu={fiabiliteContenu} />

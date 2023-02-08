@@ -1,4 +1,4 @@
-import "../../styles/SASS/components/collapse_large.scss";
+import "../../styles/SASS/components/collapse.scss";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronUp, faChevronDown } from "@fortawesome/free-solid-svg-icons";

@@ -3,3 +3,83 @@
 @import "../../SASS/utils/maps";
 @import "../../SASS/utils/mixins";
 
+main {
+
+    margin: 5% 7% ;
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 2% 0%;
+// Responsive
+flex-direction: column;
+
+// Bloc titres
+        &__titres{
+            display: flex;
+            align-items: flex-start;
+
+            h1{
+                font-size: map-get($font-size, main-title );
+                font-weight: map-get($font-weight , text );
+                padding-bottom: 1%;
+                // Responsive
+                @include mobile-only{
+                    font-size: map-get($font-size , text );
+                }
+            }
+    
+            h2{
+                font-size: map-get($font-size , text );
+                font-weight: map-get($font-weight , text );
+                // Responsive
+                @include mobile-only{
+                    font-size: map-get($font-size , tag );
+                }
+            }
+
+            .tags{
+                display: flex;
+                margin-top: 3%;
+                gap: 10px;
+                width: auto;
+
+            }
+            
+    }
+// Bloc hôte
+        &__hote{
+            
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: end;
+
+            .info-hote{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+
+                p{
+                    font-size: map-get($font-size , text );
+                    width: min-content;
+                    text-align: end;
+                    padding-right: 10px;
+
+                }
+    
+                .image-hote{
+                    width: 64px;
+                    height: 64px;
+                    border-radius: 50%;
+                }
+            }
+
+        }
+
+        }
+     
+     
+
+}

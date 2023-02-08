@@ -9,7 +9,7 @@ function Home() {
   let altImage = "Photographie d'un paysage de falaise";
 
   return (
-    <div>
+    <div className="bloc-home">
       <Banner
         imgSrc={image}
         titreBanner={titreHome}

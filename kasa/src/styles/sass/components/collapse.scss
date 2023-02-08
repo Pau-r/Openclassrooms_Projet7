@@ -3,28 +3,31 @@
 @import "../../SASS/utils/maps";
 @import "../../SASS/utils/mixins";
 
+
+.bloc-apropos{
+    margin: 2% 7% ;
 .block {
 
     display: flex;
     align-items: center;
     flex-direction: column;
     gap: 30px;
-    margin-bottom: 10%;
+    margin: 5% 15%;
     // Responsive 
         @include mobile-only{
             margin: 5% 0% 33% 0%;
         }
 
         .container{
-                width: 582px;
+                width: 100%;
                 // Responsive
                 @include mobile-only{
                     width: 335px;
                 }
 
                     .barre {
-                        width: 582px;
-                        height: 52px;
+                        width: 100%;
+                        height: 47px;
                         background-color: $color-primary;
                         border-radius: map-get($radius, border-components);
                         display: flex;
@@ -36,22 +39,18 @@
                                 @include mobile-only{
                                     width: 335px;
                                     height: 30px;
-                                    border-radius: map-get($radius , responsive-components );
-
+                    }
 
                         h2{
                             color: $color-secondary;
                             font-weight: map-get($font-weight, text );
-                            font-size: map-get($font-size , text);
+                            font-size: map-get($font-size , secondary-title);
                             padding-left: 2%;
                             // Responstive
                             @include mobile-only{
-                                font-weight: map-get($font-weight , subtitle );
                                 font-size: map-get($font-size , responsive-title );
                             }
                         }
-                    }
-
 
                         button{
                             font-size: 18px;
@@ -64,7 +63,7 @@
                     }
 
                     .bloc-contenu{
-                        border-radius: map-get($radius, border-components);
+                        border-radius: map-get($radius, responsive-components);
                         background-color: $color-tertiary;
                         width: 100%;
                         margin-top: -5px;
@@ -82,5 +81,7 @@
                     }
 
             }
+
+}
 
 }

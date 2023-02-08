@@ -8,14 +8,18 @@
     align-items: flex-end;
     width: 340px;
     height: 340px;
-    border-radius: map-get($radius , border-components );
-    
+    // Responsive
+    @include mobile-only{
+        width: 335px;
+        height: 255px;
+    }
 
     img{
-        border-radius: map-get($radius , border-components );
+    border-radius: map-get($radius , border-components );
        width: 100%;
        height: 100%;
-        @include gradient;
+       object-fit: cover;
+       filter: brightness(85%); 
     }
 
     h2{

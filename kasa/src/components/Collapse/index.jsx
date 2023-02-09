@@ -10,23 +10,29 @@ function Collapse(props) {
 
   return isOpen ? (
     // Etat ouvert
-    <div className="container">
-      <div className="barre">
-        <h2>{titre}</h2>
-        <button onClick={() => setIsOpen(false)}>
+    <div className="container container--logement">
+      <div className="barre barre--logement">
+        <h2 className="titre-collapse titre-collapse--logement">{titre}</h2>
+        <button
+          className="button-collapse button-collapse--logement"
+          onClick={() => setIsOpen(false)}
+        >
           <FontAwesomeIcon icon={faChevronUp} />
         </button>
       </div>
-      <div className="bloc-contenu">
-        <p>{contenu}</p>
+      <div className="bloc-contenu bloc-contenu--logement">
+        <p className="text-contenu text-contenu--logement">{contenu}</p>
       </div>
     </div>
   ) : (
     // Etat fermé
-    <div className="container">
-      <div className="barre">
-        <h2>{titre}</h2>
-        <button onClick={() => setIsOpen(true)}>
+    <div className="container container--logement">
+      <div className="barre barre--logement">
+        <h2 className="titre-collapse titre-collapse--logement">{titre}</h2>
+        <button
+          className="button-collapse button-collapse--logement"
+          onClick={() => setIsOpen(true)}
+        >
           <FontAwesomeIcon icon={faChevronDown} />
         </button>
       </div>

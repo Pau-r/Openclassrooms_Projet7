@@ -7,4 +7,9 @@
     margin-top: 8%;
     padding-right: 10px;
     font-size: 30px;
+    // Responsive
+    @include mobile-only {
+    font-size: map-get($font-size , responsive-tag );
+    padding-right: 5px;
+        }
 }

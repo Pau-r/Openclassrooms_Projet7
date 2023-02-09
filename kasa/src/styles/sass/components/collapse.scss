@@ -6,7 +6,7 @@
 
 .bloc-apropos{
     margin: 2% 7% ;
-.block {
+.bloc {
 
     display: flex;
     align-items: center;
@@ -41,7 +41,7 @@
                                     height: 30px;
                     }
 
-                        h2{
+                        .titre-collapse{
                             color: $color-secondary;
                             font-weight: map-get($font-weight, text );
                             font-size: map-get($font-size , secondary-title);
@@ -52,7 +52,7 @@
                             }
                         }
 
-                        button{
+                        .button-collapse{
                             font-size: 18px;
                             background: none;
                             border: none;
@@ -70,7 +70,7 @@
                         padding: 4% 3% ;
 
                     
-                        p{
+                        .text-contenu{
                             font-weight: map-get($font-weight , subtitle );
                             font-size: map-get($font-size , secondary-title );
                             // Responsive

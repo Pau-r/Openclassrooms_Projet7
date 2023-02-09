@@ -12,6 +12,9 @@
     @include mobile-only {
         height: 18px;
         line-height: 14px;
+        font-size: map-get($font-size , responsive-tag );
+        border-radius: map-get($radius, responsive-components );
+        padding: 2px 0px 1.8px 0px;
     }
 
 h3{
@@ -23,17 +26,8 @@ h3{
     // Responsive 
     @include mobile-only {
         font-size: map-get($font-size, responsive-tag );
-        padding: 0 29px;
+        padding: 0 27px;
     }
-    
-    @include mobile-only {
-        font-size: map-get($font-size , responsive-tag );
-        width: 84px;
-        height: 18px;
-        border-radius: map-get($radius, responsive-components );
-        padding: 2px 0px 1.8px 0px;
-    }
-
 }
 
 }

@@ -1,3 +1,15 @@
+Projet réalisé dans le cadre de ma formation de déveleppeur web chez Openclassroom. Je dois développer l'ensemble de l'application d'un site de location d'appartement entre particuliers. Le site est développé avec React et Sass.
+Il vous faudra simplement excuté
+
+```
+$ cd kasa/
+
+$ npm start
+
+```
+
+pour lancer le serveur de l'application.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

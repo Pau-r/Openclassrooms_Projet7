@@ -12,37 +12,44 @@ function Slideshow(props) {
   let pictures = props.pictures;
   const [index, setIndex] = useState(0);
   const nbImages = pictures.length;
+  const altImageSlideshow = props.altImage;
 
   return (
     <div className="slideshow">
       <div className="slideshow__container-chevrons">
-        <FontAwesomeIcon
-          onClick={() =>
-            index > 0 ? setIndex(index - 1) : setIndex(nbImages - 1)
-          }
-          className="chevron"
-          icon={faChevronLeft}
-        />
-        <FontAwesomeIcon
-          onClick={() =>
-            index < nbImages - 1 ? setIndex(index + 1) : setIndex(0)
-          }
-          className="chevron"
-          icon={faChevronRight}
-        />
+        {nbImages > 1 && (
+          <FontAwesomeIcon
+            onClick={() =>
+              index > 0 ? setIndex(index - 1) : setIndex(nbImages - 1)
+            }
+            className="chevron"
+            icon={faChevronLeft}
+          />
+        )}
+        {nbImages > 1 && (
+          <FontAwesomeIcon
+            onClick={() =>
+              index < nbImages - 1 ? setIndex(index + 1) : setIndex(0)
+            }
+            className="chevron"
+            icon={faChevronRight}
+          />
+        )}
       </div>
       <div className="slideshow__container-image">
         <img
           className="images-slide"
           key={index}
           src={pictures[index]}
-          alt=""
+          alt={altImageSlideshow}
         />
       </div>
       <div className="slideshow__container-number">
-        <p>
-          {index + 1}/{nbImages}
-        </p>
+        {nbImages > 1 && (
+          <p>
+            {index + 1}/{nbImages}
+          </p>
+        )}
       </div>
     </div>
   );

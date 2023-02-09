@@ -10,10 +10,13 @@ main {
 .container {
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
     align-items: flex-start;
     margin: 2% 0%;
 // Responsive
+@include mobile-only{
 flex-direction: column;
+}
 
 // Bloc titres
         &__titres{
@@ -27,6 +30,7 @@ flex-direction: column;
                 // Responsive
                 @include mobile-only{
                     font-size: map-get($font-size , text );
+                    margin-top: 1%;
                 }
             }
     
@@ -36,25 +40,35 @@ flex-direction: column;
                 // Responsive
                 @include mobile-only{
                     font-size: map-get($font-size , tag );
+                    margin-top: 1%;
                 }
             }
 
             .tags{
                 display: flex;
+                flex-wrap: wrap;
                 margin-top: 3%;
                 gap: 10px;
                 width: auto;
-
+                
             }
             
     }
 // Bloc hôte
         &__hote{
             
+            width: 100%;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: end;
+            // Responsive 
+            @include mobile-only {
+                flex-direction: row-reverse;
+                align-items: center;
+                justify-content: space-between;
+                margin-top: 3%;
+            }
 
             .info-hote{
                 display: flex;
@@ -66,6 +80,11 @@ flex-direction: column;
                     width: min-content;
                     text-align: end;
                     padding-right: 10px;
+                    // Responsive
+                    @include mobile-only {
+                        font-size: map-get($font-size , responsive-text );
+                        line-height: 15px;
+                    }
 
                 }
     
@@ -73,6 +92,12 @@ flex-direction: column;
                     width: 64px;
                     height: 64px;
                     border-radius: 50%;
+                    // Responsive 
+                    @include mobile-only{
+                        width: 32px;
+                        height: 32px;
+
+                    }
                 }
             }
 
@@ -80,6 +105,78 @@ flex-direction: column;
 
         }
      
-     
+// Collapse 
+
+.container-collapse{
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    // Responsive 
+    @include mobile-only{
+        flex-direction: column;
+    }
+
+    .container--logement{
+        width: 86%;
+        // Responsive
+        @include mobile-only{
+            width: 335px;
+        }
+        .barre--logement{
+            width: 100%;
+                        height: 47px;
+                        background-color: $color-primary;
+                        border-radius: map-get($radius, border-components);
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        position: relative;
+                        z-index: 3;
+                                    // Responsive
+                                    @include mobile-only{
+                                        width: 335px;
+                                        height: 30px;
+                        }
+    
+                        .titre-collapse--logement{
+                            color: $color-secondary;
+                            font-weight: map-get($font-weight, text );
+                            font-size: map-get($font-size , text);
+                            padding-left: 4%;
+                            // Responstive
+                            @include mobile-only{
+                                font-size: map-get($font-size , responsive-title );
+                            }
+                        }
+
+                        .button-collapse--logement{
+                            font-size: 20px;
+                            background: none;
+                            border: none;
+                            color: $color-secondary;
+                            padding-right: 4%;
+                        }
+        }
+
+        .bloc-contenu--logement  {
+            border-radius: map-get($radius, responsive-components);
+            background-color: $color-tertiary;
+            width: 100%;
+            margin-top: -5px;
+            padding: 4% 3% ;
+
+            .text-contenu--logement {
+                font-weight: map-get($font-weight , subtitle );
+                font-size: map-get($font-size , text);
+                padding: 2%;
+                // Responsive
+                @include mobile-only{
+                    font-size: map-get($font-size , responsive-text );
+                }
+            }
+        }
+    }
+
+}
 
 }

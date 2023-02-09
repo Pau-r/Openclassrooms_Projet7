@@ -4,6 +4,7 @@ import data from "../../data/logements.json";
 
 function Gallery() {
   const altImageGallery = "Photographie d'un intérieur d'appartement";
+
   return (
     <ul className="gallery">
       {data.map((logement) => (

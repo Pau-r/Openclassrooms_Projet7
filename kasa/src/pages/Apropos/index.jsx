@@ -24,7 +24,7 @@ function Apropos() {
   return (
     <div className="bloc-apropos">
       <Banner imgSrc={image} altTitreBanner={altImageHome} />
-      <div className="block">
+      <div className="bloc">
         <Collapse titre={collapseFiabilite} contenu={fiabiliteContenu} />
         <Collapse titre={collapseRespect} contenu={respectContenu} />
         <Collapse titre={collapseService} contenu={serviceContenu} />

@@ -9,7 +9,7 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
-    font-weight: map-get($font-weight , text );
+    font-weight: map-get($font-weight , text);
     color: $color-primary;
 }
 

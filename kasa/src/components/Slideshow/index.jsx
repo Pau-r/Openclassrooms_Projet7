@@ -12,10 +12,13 @@ function Slideshow(props) {
   let pictures = props.pictures;
   const [index, setIndex] = useState(0);
   const nbImages = pictures.length;
-  const altImageSlideshow = props.altImage;
+  // const altImageSlideshow = props.altImage;
 
   return (
-    <div className="slideshow">
+    <div
+      className="slideshow"
+      style={{ backgroundImage: `url("${pictures[index]}") ` }}
+    >
       <div className="slideshow__container-chevrons">
         {nbImages > 1 && (
           <FontAwesomeIcon
@@ -35,14 +38,6 @@ function Slideshow(props) {
             icon={faChevronRight}
           />
         )}
-      </div>
-      <div className="slideshow__container-image">
-        <img
-          className="images-slide"
-          key={index}
-          src={pictures[index]}
-          alt={altImageSlideshow}
-        />
       </div>
       <div className="slideshow__container-number">
         {nbImages > 1 && (

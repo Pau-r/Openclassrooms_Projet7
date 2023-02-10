@@ -5,22 +5,23 @@
 
 .gallery {
     background-color: $color-tertiary;
-    border-radius: map-get($radius , border-image );
+    border-radius: map-get($radius , border-image);
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap:60px ;
+    gap: 60px;
     padding: 5% 0%;
-    margin: 5% 7% ;
-    // Responsive
-        @include mobile-only {
-            gap: 20px;
-            background-color: transparent;
-            margin: 0%;
-            
-        }
+    margin: 5% 7%;
 
-            li{
-                list-style-type: none;
-            }
+    // Responsive
+    @include mobile-only {
+        gap: 20px;
+        background-color: transparent;
+        margin: 0%;
+
     }
+
+    li {
+        list-style-type: none;
+    }
+}

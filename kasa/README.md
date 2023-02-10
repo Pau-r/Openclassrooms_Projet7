@@ -1,5 +1,14 @@
 Projet réalisé dans le cadre de ma formation de déveleppeur web chez Openclassroom. Je dois développer l'ensemble de l'application d'un site de location d'appartement entre particuliers. Le site est développé avec React et Sass.
-Il vous faudra simplement excuté
+Vous avez besoin d'avoir `npm` installé localement sur votre machine.
+Il faudra exécuté
+
+```
+$ cd kasa/
+$ npm install
+
+```
+
+Ensuite il vous faudra exécuté
 
 ```
 $ cd kasa/

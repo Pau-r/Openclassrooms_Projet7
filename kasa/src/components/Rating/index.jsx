@@ -15,7 +15,7 @@ function Rating(props) {
       ))}
 
       {Array.from(Array(nbEtoilesGrises)).map((_, index) => (
-        <FontAwesomeIcon key={index} className="star grises" icon={faStar} />
+        <FontAwesomeIcon key={index} className="star-grises" icon={faStar} />
       ))}
     </div>
   );

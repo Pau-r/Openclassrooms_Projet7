@@ -9,60 +9,51 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    background-size: cover;
+    background-position: center;
+    border-radius: map-get($radius , border-image);
+
     // Responsive
-    @include mobile-only{
+    @include mobile-only {
         height: 255px;
     }
- 
-// Flèches 
-    &__container-chevrons{
-        width: 1240px;
+
+    // Flèches 
+    &__container-chevrons {
+        width: 100%;
         height: 415px;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 0% 5%;
-        position: absolute;    
- // Responsive bloc chevron
+        padding: 0% 3%;
+
+        // Responsive bloc chevron
         @include mobile-only {
-        width: 335px;
-        height: 255px;
+            width: 335px;
+            height: 255px;
+        }
+
+        .chevron {
+            color: $color-secondary;
+            font-size: 60px;
+            cursor: pointer;
+
+            // Responsive 
+            @include mobile-only {
+                font-size: 30px;
+            }
+
+        }
     }
-    .chevron{
+
+    &__container-number {
+        margin-top: -4%;
         color: $color-secondary;
-        font-size: 60px;
-        cursor: pointer;
-        // Responsive 
+        font-size: map-get($font-size , text);
+
+        // Responsive
         @include mobile-only {
-        font-size: 30px;
+            display: none;
+        }
     }
-
-           }
-                }
-// Images
-                &__container-image{
-    
-                    .images-slide{         
-                        border-radius: map-get($radius , border-image );
-                        width: 1240px;
-                        height: 415px;
-                        object-fit: cover;
-                        // Responsive bloc image 
-                        @include mobile-only{
-                        width: 335px;
-                        height: 255px;
-                    }
-
-                       } 
-                }
-
-                    &__container-number{
-                        margin-top: -4% ;
-                        color: $color-secondary;
-                        font-size: map-get($font-size , text );
-                        // Responsive
-                        @include mobile-only{
-                            display: none;
-                        }
-                    }
 }

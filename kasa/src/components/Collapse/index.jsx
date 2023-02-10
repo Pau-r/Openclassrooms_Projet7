@@ -21,7 +21,7 @@ function Collapse(props) {
         </button>
       </div>
       <div className="bloc-contenu bloc-contenu--logement">
-        <p className="text-contenu text-contenu--logement">{contenu}</p>
+        <div className="text-contenu text-contenu--logement">{contenu}</div>
       </div>
     </div>
   ) : (

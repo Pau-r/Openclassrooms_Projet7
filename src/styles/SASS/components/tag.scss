@@ -3,31 +3,35 @@
 @import "../../SASS/utils/maps";
 @import "../../SASS/utils/mixins";
 
-.tag-location{
+// Bloc du tag
+.tag-location {
     background-color: $color-primary;
-    border-radius: map-get($radius , border-components );
+    border-radius: map-get($radius , border-components);
     height: 25px;
     line-height: 24px;
+
     // Responsive
     @include mobile-only {
         height: 18px;
         line-height: 14px;
-        font-size: map-get($font-size , responsive-tag );
-        border-radius: map-get($radius, responsive-components );
+        font-size: map-get($font-size , responsive-tag);
+        border-radius: map-get($radius, responsive-components);
         padding: 2px 0px 1.8px 0px;
     }
 
-h3{
-    text-align: center;
-    color: $color-secondary;
-    font-size: map-get($font-size , tag );
-    font-weight: map-get($font-weight , text );
-    padding: 0 22px;
-    // Responsive 
-    @include mobile-only {
-        font-size: map-get($font-size, responsive-tag );
-        padding: 0 27px;
+    // Texte du tag
+    .text-tag {
+        text-align: center;
+        color: $color-secondary;
+        font-size: map-get($font-size , tag);
+        font-weight: map-get($font-weight , text);
+        padding: 0 22px;
+
+        // Responsive 
+        @include mobile-only {
+            font-size: map-get($font-size, responsive-tag);
+            padding: 0 27px;
+        }
     }
-}
 
 }

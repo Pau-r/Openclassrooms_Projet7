@@ -4,7 +4,7 @@ function Tag(props) {
   const tag = props.tag;
   return (
     <div className="tag-location">
-      <h3>{tag}</h3>
+      <p className="text-tag">{tag}</p>
     </div>
   );
 }

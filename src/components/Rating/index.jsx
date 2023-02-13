@@ -9,6 +9,7 @@ function Rating(props) {
   const nbEtoilesGrises = nbEtoilesMax - nbEtoilesRouges;
 
   return (
+    // Création de tableaux en fonction du rating
     <div className="ratings">
       {Array.from(Array(nbEtoilesRouges)).map((_, index) => (
         <FontAwesomeIcon key={index} className="star" icon={faStar} />

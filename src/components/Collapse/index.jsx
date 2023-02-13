@@ -12,7 +12,7 @@ function Collapse(props) {
     // Etat ouvert
     <div className="container container--logement">
       <div className="barre barre--logement">
-        <h2 className="titre-collapse titre-collapse--logement">{titre}</h2>
+        <p className="titre-collapse titre-collapse--logement">{titre}</p>
         <button
           className="button-collapse button-collapse--logement"
           onClick={() => setIsOpen(false)}
@@ -28,7 +28,7 @@ function Collapse(props) {
     // Etat fermé
     <div className="container container--logement">
       <div className="barre barre--logement">
-        <h2 className="titre-collapse titre-collapse--logement">{titre}</h2>
+        <p className="titre-collapse titre-collapse--logement">{titre}</p>
         <button
           className="button-collapse button-collapse--logement"
           onClick={() => setIsOpen(true)}

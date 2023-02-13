@@ -7,6 +7,7 @@
 .bloc-apropos {
     margin: 2% 7%;
 
+    // Bloc container des collapses
     .bloc {
 
         display: flex;
@@ -20,6 +21,7 @@
             margin: 5% 0% 33% 0%;
         }
 
+        // Bloc d'une collapse
         .container {
             width: 100%;
 
@@ -28,6 +30,7 @@
                 width: 335px;
             }
 
+            // Barre de titre
             .barre {
                 width: 100%;
                 height: 47px;
@@ -45,6 +48,7 @@
                     height: 30px;
                 }
 
+                // Titre de la barre
                 .titre-collapse {
                     color: $color-secondary;
                     font-weight: map-get($font-weight, text);
@@ -57,6 +61,7 @@
                     }
                 }
 
+                // Bouton de ma barre
                 .button-collapse {
                     font-size: 18px;
                     background: none;
@@ -67,6 +72,7 @@
 
             }
 
+            // Bloc de contenu de la collapse ouverte
             .bloc-contenu {
                 border-radius: map-get($radius, responsive-components);
                 background-color: $color-tertiary;
@@ -74,7 +80,7 @@
                 margin-top: -5px;
                 padding: 4% 3%;
 
-
+                // Texte de la collapse ouvertes
                 .text-contenu {
                     font-weight: map-get($font-weight , subtitle);
                     font-size: map-get($font-size , secondary-title);

@@ -12,7 +12,6 @@ function Slideshow(props) {
   let pictures = props.pictures;
   const [index, setIndex] = useState(0);
   const nbImages = pictures.length;
-  // const altImageSlideshow = props.altImage;
 
   return (
     <div

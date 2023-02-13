@@ -18,7 +18,7 @@
         height: 255px;
     }
 
-    // Flèches 
+    // Blocs des chevrons
     &__container-chevrons {
         width: 100%;
         height: 415px;
@@ -33,6 +33,7 @@
             height: 255px;
         }
 
+        // Chevrons
         .chevron {
             color: $color-secondary;
             font-size: 60px;
@@ -46,6 +47,7 @@
         }
     }
 
+    // Nombre
     &__container-number {
         margin-top: -4%;
         color: $color-secondary;

@@ -3,7 +3,6 @@ Vous avez besoin d'avoir `npm` installé localement sur votre machine.
 Il faudra exécuté
 
 ```
-$ cd kasa/
 $ npm install
 
 ```
@@ -11,7 +10,6 @@ $ npm install
 Ensuite il vous faudra exécuté
 
 ```
-$ cd kasa/
 
 $ npm start
 

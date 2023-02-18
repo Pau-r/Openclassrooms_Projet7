@@ -63,12 +63,25 @@
 
                 // Bouton de ma barre
                 .button-collapse {
-                    font-size: 18px;
                     background: none;
                     border: none;
                     color: $color-secondary;
                     padding-right: 2%;
+
+                    //Responsive
+                    @include mobile-only {
+                        padding-right: 3%;
+                    }
+
+                    @include mobile-only {
+                        img {
+                            width: 16px;
+                        }
+                    }
+
                 }
+
+
 
             }
 

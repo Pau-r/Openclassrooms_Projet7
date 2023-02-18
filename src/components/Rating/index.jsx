@@ -1,7 +1,7 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faStar } from "@fortawesome/free-solid-svg-icons";
 import "../../styles/SASS/components/rating.scss";
+import etoileRouge from "../../assets/etoile_rouge.webp";
+import etoileGrise from "../../assets/etoile_grise.webp";
 
 function Rating(props) {
   const nbEtoilesRouges = parseInt(props.rating);
@@ -12,11 +12,21 @@ function Rating(props) {
     // Création de tableaux en fonction du rating
     <div className="ratings">
       {Array.from(Array(nbEtoilesRouges)).map((_, index) => (
-        <FontAwesomeIcon key={index} className="star" icon={faStar} />
+        <img
+          src={etoileRouge}
+          alt="etoile rouge"
+          key={index}
+          className="star"
+        />
       ))}
 
       {Array.from(Array(nbEtoilesGrises)).map((_, index) => (
-        <FontAwesomeIcon key={index} className="star-grises" icon={faStar} />
+        <img
+          src={etoileGrise}
+          alt="etoile grise"
+          key={index}
+          className="star-grises"
+        />
       ))}
     </div>
   );

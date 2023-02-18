@@ -1,7 +1,7 @@
 import "../../styles/SASS/components/collapse.scss";
 import { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronUp, faChevronDown } from "@fortawesome/free-solid-svg-icons";
+import chevronHaut from "../../assets/chevron_haut.webp";
+import chevronBas from "../../assets/chevron_bas.webp";
 
 function Collapse(props) {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,7 +17,7 @@ function Collapse(props) {
           className="button-collapse button-collapse--logement"
           onClick={() => setIsOpen(false)}
         >
-          <FontAwesomeIcon icon={faChevronUp} />
+          <img src={chevronHaut} alt="Chevron haut" />
         </button>
       </div>
       <div className="bloc-contenu bloc-contenu--logement">
@@ -33,7 +33,7 @@ function Collapse(props) {
           className="button-collapse button-collapse--logement"
           onClick={() => setIsOpen(true)}
         >
-          <FontAwesomeIcon icon={faChevronDown} />
+          <img src={chevronBas} alt="Chevron bas" />
         </button>
       </div>
     </div>

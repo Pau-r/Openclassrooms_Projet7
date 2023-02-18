@@ -36,12 +36,11 @@
         // Chevrons
         .chevron {
             color: $color-secondary;
-            font-size: 60px;
             cursor: pointer;
 
             // Responsive 
             @include mobile-only {
-                font-size: 30px;
+                width: 15px;
             }
 
         }

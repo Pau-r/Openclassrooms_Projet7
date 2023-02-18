@@ -59,7 +59,7 @@ main {
         }
 
         // Bloc hôte
-        &__hote {
+        &__hote {  
 
             width: 100%;
             display: flex;
@@ -162,11 +162,16 @@ main {
                 }
 
                 .button-collapse--logement {
-                    font-size: 20px;
                     background: none;
                     border: none;
                     color: $color-secondary;
                     padding-right: 4%;
+                    img{
+                        @include mobile-only {
+                            width: 16px;
+                        }
+                    }
+
                 }
             }
 
